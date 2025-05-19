@@ -1,0 +1,266 @@
+:root {
+  --primary: #4A6FDC;
+  --primary-light: #6B8AE5;
+  --secondary: #34495e;
+  --light-gray: #f5f7fa;
+  --mid-gray: #e4e8f0;
+  --dark-gray: #777;
+  --success: #27ae60;
+  --warning: #f39c12;
+  --error: #e74c3c;
+  --danger: #c0392b;
+  --text-primary: #333;
+  --text-secondary: #666;
+  --white: #fff;
+  --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  --border-radius: 8px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--light-gray);
+  color: var(--text-primary);
+}
+
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  background-color: var(--white);
+  min-height: 100vh;
+  box-shadow: var(--shadow);
+}
+
+/* Header styles */
+header {
+  padding: 24px;
+  background-color: var(--white);
+  border-bottom: 1px solid var(--mid-gray);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.logo img {
+  width: 36px;
+  height: 36px;
+}
+
+.logo h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.subtitle {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-left: 48px;
+}
+
+/* Main content */
+main {
+  padding: 24px;
+}
+
+.settings-group {
+  margin-bottom: 32px;
+}
+
+.settings-group h2 {
+  font-size: 18px;
+  margin-bottom: 16px;
+  color: var(--secondary);
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--mid-gray);
+}
+
+.setting-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.setting-info {
+  flex: 1;
+}
+
+.setting-info label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.description {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.setting-control {
+  min-width: 80px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Switch toggle */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--mid-gray);
+  transition: .3s;
+}
+
+.slider.round {
+  border-radius: 24px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: .3s;
+}
+
+input:checked + .slider {
+  background-color: var(--primary);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--primary);
+}
+
+input:checked + .slider:before {
+  transform: translateX(24px);
+}
+
+/* Select dropdown */
+select {
+  padding: 8px 12px;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--mid-gray);
+  background-color: var(--white);
+  font-size: 14px;
+  width: 160px;
+}
+
+/* Privacy info section */
+.privacy-info {
+  background-color: var(--light-gray);
+  padding: 16px;
+  border-radius: var(--border-radius);
+  margin-top: 24px;
+}
+
+.privacy-info h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: var(--secondary);
+}
+
+.privacy-info p {
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: var(--text-secondary);
+}
+
+.privacy-info a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.privacy-info a:hover {
+  text-decoration: underline;
+}
+
+/* Button styles */
+.btn {
+  padding: 8px 16px;
+  border-radius: var(--border-radius);
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 14px;
+}
+
+.primary {
+  background-color: var(--primary);
+  color: white;
+}
+
+.primary:hover {
+  background-color: var(--primary-light);
+}
+
+.secondary {
+  background-color: var(--mid-gray);
+  color: var(--text-primary);
+}
+
+.secondary:hover {
+  background-color: #d1d7e0;
+}
+
+.danger {
+  background-color: var(--error);
+  color: white;
+}
+
+.danger:hover {
+  background-color: var(--danger);
+}
+
+/* Footer */
+footer {
+  padding: 24px;
+  border-top: 1px solid var(--mid-gray);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+}
+
+.version {
+  font-size: 12px;
+  color: var(--dark-gray);
+}
