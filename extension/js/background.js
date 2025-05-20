@@ -1,8 +1,18 @@
 // Yoola Background Script
 // Handles background tasks and manages extension lifecycle
 
+// Backend API URL
+const API_URL = 'http://127.0.0.1:8000';
+
 // Initialize extension when installed or updated
 chrome.runtime.onInstalled.addListener((details) => {
+  // Create context menu item for terms of service links
+  chrome.contextMenus.create({
+    id: 'yoola-summarize',
+    title: 'Summarize Terms with Yoola',
+    contexts: ['link'],
+    documentUrlPatterns: ['<all_urls>']
+  });
   if (details.reason === 'install') {
     // Set default settings for new installations
     chrome.storage.sync.set({
@@ -108,6 +118,85 @@ async function cacheSummary(domain, data) {
       chrome.storage.local.set({ summaryCache: cache }, () => {
         resolve({ success: true });
       });
+    });
+  });
+}
+
+// Handle context menu clicks
+chrome.contextMenus.onClicked.addListener((info, tab) => {
+  if (info.menuItemId === 'yoola-summarize') {
+    // Get the URL from the clicked link
+    const url = info.linkUrl;
+    
+    // Extract the domain
+    const domain = new URL(url).hostname;
+    
+    // Check if it's likely a terms of service link
+    const tosPatterns = [
+      /terms/i, /conditions/i, /privacy/i, /policy/i, /agreement/i, /legal/i
+    ];
+    
+    const isTosLink = tosPatterns.some(pattern => {
+      return pattern.test(url) || (info.linkText && pattern.test(info.linkText));
+    });
+    
+    // If it looks like a ToS link, show the summary
+    if (isTosLink) {
+      showSummary(url, domain, tab.id);
+    } else {
+      // Ask for confirmation if it doesn't look like a ToS link
+      chrome.tabs.sendMessage(tab.id, {
+        action: 'confirmSummarize',
+        url: url,
+        domain: domain
+      });
+    }
+  }
+});
+
+// Function to fetch and show summary
+function showSummary(url, domain, tabId) {
+  // Fetch summary from API
+  fetch(`${API_URL}/summary`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      domain: domain,
+      url: url,
+      content: ''
+    })
+  })
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('API error: ' + response.status);
+    }
+    return response.json();
+  })
+  .then(data => {
+    // Store summary in local storage for popup
+    chrome.storage.local.set({
+      currentSummary: data,
+      summaryUrl: url,
+      summaryDomain: domain
+    }, () => {
+      // Send message to content script to show modal if available
+      chrome.tabs.sendMessage(tabId, {
+        action: 'showSummary',
+        summary: data
+      });
+      
+      // Open popup
+      chrome.action.openPopup();
+    });
+  })
+  .catch(error => {
+    console.error('Error fetching summary:', error);
+    // Notify user of error
+    chrome.tabs.sendMessage(tabId, {
+      action: 'showError',
+      error: error.message
     });
   });
 }

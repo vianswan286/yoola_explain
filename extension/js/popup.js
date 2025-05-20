@@ -62,7 +62,16 @@ document.addEventListener('DOMContentLoaded', async () => {
     try {
       showState('loading');
       
-      // First check if there are terms on the page
+      // First check if there's a cached summary from context menu
+      const cachedSummary = await chrome.storage.local.get(['currentSummary', 'summaryUrl']);
+      
+      if (cachedSummary.currentSummary && cachedSummary.summaryUrl === url) {
+        // Use cached summary if available
+        displaySummary(cachedSummary.currentSummary, new URL(url).hostname);
+        return;
+      }
+      
+      // Check if there are terms on the page
       const hasTerms = await chrome.tabs.sendMessage(tabId, { action: 'checkForTerms' });
       
       if (!hasTerms.found) {
@@ -74,7 +83,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       const domain = new URL(url).hostname;
       
       // Make API request to backend
-      const apiUrl = 'https://api.yoola.app/summary';
+      const apiUrl = 'http://127.0.0.1:8000/summary';
       const response = await fetch(apiUrl, {
         method: 'POST',
         headers: {
@@ -92,6 +101,14 @@ document.addEventListener('DOMContentLoaded', async () => {
       }
 
       const data = await response.json();
+      
+      // Cache the summary for potential context menu use
+      await chrome.storage.local.set({
+        currentSummary: data,
+        summaryUrl: url,
+        summaryDomain: domain
+      });
+      
       displaySummary(data, domain);
     } catch (error) {
       console.error('Error fetching summary:', error);
