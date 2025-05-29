@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yoola - Terms Summarizer</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <img src="../images/icon48.png" alt="Yoola Logo">
+        <h1>Yoola</h1>
+      </div>
+      <p class="tagline">AI-Powered Terms Summarizer</p>
+    </header>
+
+    <div class="content">
+      <div id="initial-view">
+        <button id="summarize-page" class="btn primary">Summarize This Page</button>
+        
+        <div class="language-selector">
+          <label for="language-select">Summary Language:</label>
+          <select id="language-select"></select>
+        </div>
+        
+        <div class="options">
+          <button id="open-options" class="btn secondary">Settings</button>
+        </div>
+      </div>
+      
+      <div id="loading-view" class="hidden">
+        <div class="spinner"></div>
+        <p>Analyzing terms and generating summary...</p>
+      </div>
+      
+      <div id="error-view" class="hidden">
+        <div class="error-icon">⚠️</div>
+        <p id="error-message">Unable to generate summary.</p>
+        <button id="try-again" class="btn primary">Try Again</button>
+      </div>
+      
+      <div id="not-terms-view" class="hidden">
+        <p>This doesn't appear to be a Terms of Service page.</p>
+        <p>Would you like to try summarizing it anyway?</p>
+        <div class="button-group">
+          <button id="force-summarize" class="btn primary">Yes, Summarize</button>
+          <button id="cancel-summarize" class="btn secondary">No, Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>Right-click on any Terms of Service link to summarize</p>
+    </footer>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

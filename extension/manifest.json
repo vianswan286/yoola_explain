@@ -1,15 +1,15 @@
 {
   "manifest_version": 3,
-  "name": "Yoola - User Agreement Summarizer",
+  "name": "Yoola - AI-Powered Terms of Service Summarizer",
   "version": "1.0.0",
-  "description": "Simplifies user agreements and terms of service by providing easy-to-understand summaries",
+  "description": "Simplifies user agreements and terms of service by providing easy-to-understand, AI-generated summaries",
   "icons": {
     "16": "images/icon16.png",
     "48": "images/icon48.png",
     "128": "images/icon128.png"
   },
   "action": {
-    "default_popup": "popup.html",
+    "default_popup": "popup/popup.html",
     "default_icon": {
       "16": "images/icon16.png",
       "48": "images/icon48.png",
@@ -19,19 +19,25 @@
   "permissions": [
     "activeTab",
     "storage",
+    "contextMenus",
     "scripting",
-    "contextMenus"
+    "tabs"
   ],
   "host_permissions": [
+    "http://127.0.0.1:8000/*",
     "<all_urls>"
   ],
   "background": {
-    "service_worker": "js/background.js"
+    "service_worker": "background.js"
   },
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["js/content.js"]
+      "js": ["content.js"]
     }
-  ]
+  ],
+  "options_ui": {
+    "page": "options/options.html",
+    "open_in_tab": false
+  }
 }

@@ -1,0 +1,15 @@
+# Server Login Credentials
+SERVER_IP=your_server_ip_address
+SERVER_USERNAME=your_server_username
+SERVER_PASSWORD=your_server_password  # Only if needed
+SSH_KEY_PATH=/path/to/your/ssh/key   # Only if using SSH key
+
+# API Configuration 
+OPENROUTER_API_KEY=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
+YOOLA_REFERER_URL=77.74.201.211
+YOOLA_APP_NAME=Yoola ToS Summarizer
+DEBUG=True
+
+# Deployment Settings
+REMOTE_DIR=/opt/yoola           # Directory on the server where you want to deploy
+PORT=8000                       # Port for the API to run on

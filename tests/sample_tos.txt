@@ -1,0 +1,93 @@
+TERMS OF SERVICE FOR EXAMPLE COMPANY
+
+Last Updated: May 15, 2025
+
+1. ACCEPTANCE OF TERMS
+
+By accessing or using Example Company's website, mobile applications, products, or services (collectively, the "Services"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, you may not access or use the Services.
+
+2. CHANGES TO TERMS
+
+Example Company reserves the right to modify these Terms at any time. We will provide notice of any material changes through the Services or by other means. Your continued use of the Services after such modifications constitutes your acceptance of the modified Terms.
+
+3. PRIVACY POLICY
+
+Our Privacy Policy, available at www.examplecompany.com/privacy, governs our collection, use, and disclosure of your information. By using our Services, you consent to our Privacy Policy.
+
+4. USER ACCOUNTS
+
+4.1 Registration. To access certain features of the Services, you may need to register for an account. You agree to provide accurate, current, and complete information and to update this information to maintain its accuracy.
+
+4.2 Account Security. You are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account. You agree to notify Example Company immediately of any unauthorized use of your account.
+
+5. USER CONTENT
+
+5.1 Ownership. You retain ownership of any content you submit, post, or display through the Services ("User Content").
+
+5.2 License Grant. By submitting User Content, you grant Example Company a worldwide, non-exclusive, royalty-free license to use, reproduce, modify, adapt, publish, translate, distribute, and display such User Content for the purpose of providing and promoting the Services.
+
+5.3 Responsibility for User Content. You are solely responsible for your User Content and the consequences of posting it. Example Company has no obligation to monitor User Content but may remove any User Content that violates these Terms or is otherwise objectionable.
+
+6. PROHIBITED CONDUCT
+
+You agree not to:
+- Violate any applicable law or regulation
+- Infringe the rights of others
+- Use the Services to transmit harmful code or interfere with the operation of the Services
+- Attempt to gain unauthorized access to the Services or related systems
+- Use automated means to access or collect data from the Services without prior permission
+- Impersonate any person or entity or misrepresent your affiliation
+
+7. INTELLECTUAL PROPERTY
+
+7.1 Example Company Property. The Services, including all content, features, and functionality, are owned by Example Company and are protected by copyright, trademark, and other intellectual property laws.
+
+7.2 Limited License. Example Company grants you a limited, non-exclusive, non-transferable, revocable license to access and use the Services for personal, non-commercial purposes.
+
+8. THIRD-PARTY LINKS AND SERVICES
+
+The Services may contain links to third-party websites or services. Example Company is not responsible for the content or practices of any third-party websites or services and does not endorse them.
+
+9. TERMINATION
+
+9.1 By You. You may terminate your account at any time by following the instructions on the Services.
+
+9.2 By Example Company. Example Company may suspend or terminate your access to the Services at any time, without notice, for conduct that Example Company believes violates these Terms or is harmful to other users, Example Company, or third parties, or for any other reason.
+
+10. DISCLAIMER OF WARRANTIES
+
+THE SERVICES ARE PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT.
+
+11. LIMITATION OF LIABILITY
+
+IN NO EVENT WILL EXAMPLE COMPANY BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES ARISING OUT OF OR IN CONNECTION WITH YOUR USE OF THE SERVICES, EVEN IF EXAMPLE COMPANY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+12. INDEMNIFICATION
+
+You agree to indemnify and hold harmless Example Company from and against any claims, liabilities, damages, losses, and expenses arising out of or in any way connected with your access to or use of the Services or your violation of these Terms.
+
+13. GOVERNING LAW
+
+These Terms shall be governed by the laws of the State of Delaware without regard to its conflict of law provisions.
+
+14. DISPUTE RESOLUTION
+
+14.1 Mandatory Arbitration. Any dispute arising out of or relating to these Terms or the Services shall be resolved by binding arbitration in accordance with the rules of the American Arbitration Association.
+
+14.2 Class Action Waiver. You agree that any arbitration or proceeding shall be limited to the dispute between us and shall not be consolidated with any other dispute or proceeding involving any other person or entity.
+
+14.3 Small Claims Court. Notwithstanding the foregoing, you may bring an individual action in small claims court.
+
+15. GENERAL PROVISIONS
+
+15.1 Entire Agreement. These Terms constitute the entire agreement between you and Example Company regarding the Services.
+
+15.2 Waiver. The failure of Example Company to enforce any right or provision of these Terms will not be deemed a waiver of such right or provision.
+
+15.3 Severability. If any provision of these Terms is held to be invalid or unenforceable, such provision shall be struck and the remaining provisions shall be enforced.
+
+15.4 Assignment. You may not assign these Terms without Example Company's prior written consent. Example Company may assign these Terms without restriction.
+
+15.5 Contact. Questions about these Terms should be sent to legal@examplecompany.com.
+
+By using our Services, you acknowledge that you have read, understood, and agree to be bound by these Terms.
